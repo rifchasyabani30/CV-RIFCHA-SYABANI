@@ -1,6 +1,6 @@
 :root {
     --main-bg-color: #fff;
-    --button-bg-color: #bd8870; /* Dark brown color */
+    --button-bg-color: #bd8870; 
     --button-text-color: #fff;
     --secondary-button-bg-color: #e0e0e0;
     --secondary-button-text-color: #333;
@@ -32,23 +32,23 @@
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: #4E3B31; /* Coklat tua */
+    color: #4E3B31; 
   }
   
   .profession {
     font-size: 1.5rem;
     color: #555;
-    animation: slideIn 3s forwards; /* Menambahkan animasi */
+    animation: slideIn 3s forwards; 
   }
   
   @keyframes slideIn {
     0% {
-      transform: translateX(-30px); /* Mulai dari kiri */
-      opacity: 0; /* Mulai tidak terlihat */
+      transform: translateX(-30px); 
+      opacity: 0; 
     }
     100% {
-      transform: translateX(0); /* Pergi ke posisi normal */
-      opacity: 1; /* Menjadi terlihat */
+      transform: translateX(0); 
+      opacity: 1; 
     }
   }
   
@@ -90,7 +90,7 @@
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 120px; /* Jarak antara section */
+    margin-top: 120px; 
   }
   
   h2 {
@@ -105,22 +105,22 @@
   
   .content {
     display: flex;
-    gap: 20px; /* Jarak antar bagian */
+    gap: 20px; 
   }
   
   .skills,
   .experience {
-    flex: 1; /* Memastikan bagian skills dan experience memiliki lebar yang sama */
+    flex: 1; 
   }
   
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Membagi menjadi 2 kolom */
-    gap: 20px; /* Jarak antar skill */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
   }
   
   .skill {
-    margin-bottom: 10px; /* Jarak antara skill */
+    margin-bottom: 10px; 
   }
   
   .skill-name {
@@ -133,7 +133,7 @@
   }
   
   .skill-percentage {
-    height: 6px; /* Ukuran diperkecil */
+    height: 6px; 
     border-radius: 5px;
   }
   
@@ -151,31 +151,31 @@
     flex: 1;
     padding: 1rem;
     cursor: pointer;
-    background-color: var(--button-bg-color); /* Dark brown color */
+    background-color: var(--button-bg-color); 
     border: none;
     border-radius: 5px;
     text-align: center;
-    color: #000; /* Change font color to black */
-    transition: background-color 0.3s, transform 0.2s; /* Added transform for smooth scaling */
+    color: #000; 
+    transition: background-color 0.3s, transform 0.2s; 
 }
 
 .tab:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Light overlay on hover */
-    transform: scale(1.02); /* Slightly enlarge on hover */
+    background-color: rgba(255, 255, 255, 0.1); 
+    transform: scale(1.02); 
 }
 
 .tab.active {
-    background-color: #F5F5DC; /* Warna krem saat aktif */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: shadow for active tab */
+    background-color: #F5F5DC; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .tab-content {
-    margin-top: 0.5rem; /* Space above the description */
-    color: #000; /* Change font color to black */
-    font-size: 1rem; /* Font size */
-    line-height: 1.5; /* Increase line height for readability */
-    font-family: 'Arial', sans-serif; /* Font family */
-    text-align: justify; /* Justify text */
+    margin-top: 0.5rem; 
+    color: #000; 
+    font-size: 1rem; 
+    line-height: 1.5; 
+    font-family: 'Arial', sans-serif; 
+    text-align: justify; 
 }
 
   
@@ -184,18 +184,18 @@
   .education-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Adjust the gap between items */
+    gap: 20px; 
   }
   
   .experience-item,
   .education-item {
-    flex: 1 1 calc(50% - 20px); /* Adjust for two columns with gap */
+    flex: 1 1 calc(50% - 20px); 
     box-sizing: border-box;
-    padding: 20px; /* Padding inside the box */
-    background-color: #f9f9f9; /* Background color for the box */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
-    margin-bottom: 20px; /* Space between items */
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 30px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px; 
   }
   
   /* Responsive Design */
@@ -209,12 +209,12 @@
     }
     .experience-item,
     .education-item {
-      flex: 1 1 100%; /* Stack items on smaller screens */
+      flex: 1 1 100%; 
     }
   }
   
   .my-projects {
-    font-size: 20px; /* Menyesuaikan ukuran font */
+    font-size: 20px; 
     background-color: #fff;
     padding: 40px;
     border-radius: 20px;
@@ -234,33 +234,33 @@
   
   .project-item {
     background-color: #fff;
-    border-radius: 8px; /* Menambahkan radius untuk sudut */
+    border-radius: 8px; 
     padding: 20px;
-    width: 300px; /* Mengurangi lebar agar lebih rapi */
+    width: 300px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk kedalaman */
-    border: 2px solid #F5F5DC; /* Menambahkan border yang konsisten */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); 
+    border: 2px solid #F5F5DC; 
   }
   
   .carousel {
     position: relative;
     width: 100%;
-    height: 200px; /* Mengatur tinggi untuk mencegah pemotongan gambar */
+    height: 200px; 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border-radius: 8px; /* Radius untuk sudut carousel */
+    border-radius: 8px; 
   }
   
   .carousel img {
     width: 100%;
-    height: 100%; /* Mengatur tinggi agar gambar memenuhi area */
-    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+    height: 100%; 
+    object-fit: cover; 
   }
   
   .prev-button,
@@ -273,7 +273,7 @@
     border: none;
     padding: 10px;
     cursor: pointer;
-    border-radius: 5px; /* Menambahkan radius untuk tombol */
+    border-radius: 5px; 
   }
   
   .contact-section {
@@ -314,7 +314,7 @@
   
   .contact-item i {
     font-size: 24px;
-    color: var(--button-bg-color); /* Adjust icon color */
+    color: var(--button-bg-color); 
   }
   
   .contact-item p {
@@ -337,13 +337,13 @@
   }
   
   .navbar {
-    background: linear-gradient(to right, #4E3B31, #bd8870); /* Gradient background */
+    background: linear-gradient(to right, #4E3B31, #bd8870); 
     padding: 1rem;
     color: #fff;
-    position: relative; /* Keep it fixed if you want it to stick at the top */
-    z-index: 1000; /* Ensure it appears above other elements */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
-    transition: background-color 0.3s; /* Smooth transition on hover */
+    position: relative; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s; 
   }
   
   .navbar-container {
@@ -362,7 +362,7 @@
   .navbar-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem; /* Increased gap for better spacing */
+    gap: 1.5rem; 
   }
   
   .navbar-links li {
@@ -372,21 +372,20 @@
   .navbar-links a {
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem; /* Add padding for clickable area */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    padding: 0.5rem 1rem; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, color 0.3s; 
   }
   
   .navbar-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Light overlay on hover */
-    color: #bd8870; /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #bd8870; 
   }
   
-  /* Optional: Responsive adjustments */
   @media (max-width: 768px) {
     .navbar-links {
-      flex-direction: column; /* Stack links vertically on smaller screens */
-      gap: 0.5rem; /* Reduced gap */
+      flex-direction: column; 
+      gap: 0.5rem; 
     }
   }
   
