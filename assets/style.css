@@ -1,0 +1,396 @@
+:root {
+    --main-bg-color: #fff;
+    --button-bg-color: #bd8870; /* Dark brown color */
+    --button-text-color: #fff;
+    --secondary-button-bg-color: #e0e0e0;
+    --secondary-button-text-color: #333;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+  }
+  
+  .left-section {
+    flex: 1;
+    padding: 4rem;
+    background-color: #fff;
+  }
+  
+  .text-content {
+    margin-bottom: 2rem;
+  }
+  
+  .im {
+    font-size: 1.2rem;
+    color: #888;
+  }
+  
+  .name {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #4E3B31; /* Coklat tua */
+  }
+  
+  .profession {
+    font-size: 1.5rem;
+    color: #555;
+    animation: slideIn 3s forwards; /* Menambahkan animasi */
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-30px); /* Mulai dari kiri */
+      opacity: 0; /* Mulai tidak terlihat */
+    }
+    100% {
+      transform: translateX(0); /* Pergi ke posisi normal */
+      opacity: 1; /* Menjadi terlihat */
+    }
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 1rem;
+  }
+  
+  .right-section {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .right-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Yellow Paint Splatter Effect */
+  .right-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+  }
+  
+  /* Skills & Experience Styles */
+  .skills-experience {
+    font-family: 'sans-serif', sans-serif;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 120px; /* Jarak antara section */
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .intro-text {
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .content {
+    display: flex;
+    gap: 20px; /* Jarak antar bagian */
+  }
+  
+  .skills,
+  .experience {
+    flex: 1; /* Memastikan bagian skills dan experience memiliki lebar yang sama */
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Membagi menjadi 2 kolom */
+    gap: 20px; /* Jarak antar skill */
+  }
+  
+  .skill {
+    margin-bottom: 10px; /* Jarak antara skill */
+  }
+  
+  .skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .skill-bar {
+    width: 100%;
+  }
+  
+  .skill-percentage {
+    height: 6px; /* Ukuran diperkecil */
+    border-radius: 5px;
+  }
+  
+  .percentage-label {
+    text-align: right;
+  }
+  
+  /* Experience & Education Styles */
+  .tabs {
+    display: flex;
+    margin-top: 1rem;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--button-bg-color); /* Dark brown color */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    color: #000; /* Change font color to black */
+    transition: background-color 0.3s, transform 0.2s; /* Added transform for smooth scaling */
+}
+
+.tab:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light overlay on hover */
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.tab.active {
+    background-color: #F5F5DC; /* Warna krem saat aktif */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: shadow for active tab */
+}
+
+.tab-content {
+    margin-top: 0.5rem; /* Space above the description */
+    color: #000; /* Change font color to black */
+    font-size: 1rem; /* Font size */
+    line-height: 1.5; /* Increase line height for readability */
+    font-family: 'Arial', sans-serif; /* Font family */
+    text-align: justify; /* Justify text */
+}
+
+  
+  /* Grid styles for experience and education */
+  .experience-grid,
+  .education-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between items */
+  }
+  
+  .experience-item,
+  .education-item {
+    flex: 1 1 calc(50% - 20px); /* Adjust for two columns with gap */
+    box-sizing: border-box;
+    padding: 20px; /* Padding inside the box */
+    background-color: #f9f9f9; /* Background color for the box */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    margin-bottom: 20px; /* Space between items */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+    .left-section {
+      padding: 2rem;
+    }
+    .experience-item,
+    .education-item {
+      flex: 1 1 100%; /* Stack items on smaller screens */
+    }
+  }
+  
+  .my-projects {
+    font-size: 20px; /* Menyesuaikan ukuran font */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .project-item {
+    background-color: #fff;
+    border-radius: 8px; /* Menambahkan radius untuk sudut */
+    padding: 20px;
+    width: 300px; /* Mengurangi lebar agar lebih rapi */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk kedalaman */
+    border: 2px solid #F5F5DC; /* Menambahkan border yang konsisten */
+  }
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Mengatur tinggi untuk mencegah pemotongan gambar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px; /* Radius untuk sudut carousel */
+  }
+  
+  .carousel img {
+    width: 100%;
+    height: 100%; /* Mengatur tinggi agar gambar memenuhi area */
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Menambahkan radius untuk tombol */
+  }
+  
+  .contact-section {
+    background-color: #4E3B31;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .contact-intro {
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #F5F5DC;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-item i {
+    font-size: 24px;
+    color: var(--button-bg-color); /* Adjust icon color */
+  }
+  
+  .contact-item p {
+    margin: 0;
+  }
+  
+  .contact-item a {
+    color: var(--button-bg-color);
+    text-decoration: none;
+  }
+  
+  .contact-item a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-grid {
+      flex-direction: column;
+    }
+  }
+  
+  .navbar {
+    background: linear-gradient(to right, #4E3B31, #bd8870); /* Gradient background */
+    padding: 1rem;
+    color: #fff;
+    position: relative; /* Keep it fixed if you want it to stick at the top */
+    z-index: 1000; /* Ensure it appears above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; /* Increased gap for better spacing */
+  }
+  
+  .navbar-links li {
+    margin: 0;
+  }
+  
+  .navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Add padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  .navbar-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light overlay on hover */
+    color: #bd8870; /* Change text color on hover */
+  }
+  
+  /* Optional: Responsive adjustments */
+  @media (max-width: 768px) {
+    .navbar-links {
+      flex-direction: column; /* Stack links vertically on smaller screens */
+      gap: 0.5rem; /* Reduced gap */
+    }
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
